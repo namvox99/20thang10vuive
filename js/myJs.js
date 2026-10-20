@@ -7,7 +7,7 @@ const textConfig = {
   text6: "Đâu cho xem thử coiiiiii",
   text7: "Có gì để nói với lớp trửn nèeee ?",
   text8: "Gửi cho tui coi dớiii",
-  text9: "Cảm ơn lớp trửn dễ thương nhất HCMUE nho",
+  text9: "Cảm ơn lớp trửn dễ thương nhất HCMUE nhooooooo",
   text10: "1, 2, 3 con cá. 20/10 vui vẻ nháaaa",
   text11:
     "Okela nè. Chúc tất cả các bóng hồng của 52.01.NNANH.C có một ngày 20/10 thật là tuyệt dời nghe <3",
