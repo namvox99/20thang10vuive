@@ -130,17 +130,7 @@ $(document).ready(function () {
       confirmButtonText: textConfig.text8,
     }).then((result) => {
       if (result.value) {
-        Swal.fire({
-          width: 900,
-          confirmButtonText: textConfig.text12,
-          background: '#fff url("img/iput-bg.jpg")',
-          title: textConfig.text10,
-          text: textConfig.text11,
-          confirmButtonColor: "#83d0c9",
-          onClose: () => {
-            window.location = "https://www.youtube.com/watch?v=WCm2elbTEZQ";
-          },
-        });
+        showFinalScene(textConfig.text10, textConfig.text11);
       }
     });
 
