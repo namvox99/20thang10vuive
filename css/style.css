@@ -82,3 +82,173 @@ header h4 {
     -webkit-transition: all 0.3s ease-out;
   }
 }
+
+/* The final greeting: a sky full of the girls' names. */
+.final-scene[hidden] { display: none; }
+.final-scene, .final-scene * { box-sizing: border-box; }
+body.final-active { overflow: hidden !important; }
+.final-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: auto;
+  isolation: isolate;
+  color: #fff5fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(150deg, rgba(26, 23, 65, .62), rgba(53, 26, 62, .48)),
+    url(../img/puung3.png) center / cover no-repeat;
+}
+.floating-names {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  mask-image: linear-gradient(transparent, #000 8%, #000 92%, transparent);
+}
+.name-drop {
+  position: absolute;
+  top: -100px;
+  left: var(--scatter-left);
+  width: var(--name-width);
+  padding: 0;
+  text-align: center;
+  animation: name-fall var(--fall-duration) linear var(--fall-delay) infinite;
+  will-change: transform;
+}
+.floating-name {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  font-size: var(--name-size);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--name-color);
+  text-shadow: 0 2px 5px #211936, 0 0 16px rgba(255, 181, 212, .65);
+  animation: name-sway var(--sway-duration) ease-in-out var(--sway-delay) infinite alternate;
+}
+.final-content {
+  min-height: 100%;
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 110px 0 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.final-letter {
+  width: 100%;
+  padding: 30px 42px;
+  text-align: center;
+  border: 1px solid rgba(255, 220, 236, .22);
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0c172f, #102337);
+  box-shadow: 0 20px 80px rgba(21, 12, 42, .35), 0 0 55px rgba(255, 190, 219, .08);
+}
+.final-eyebrow { color: #e6b5d6; font-size: 12px; letter-spacing: .2em; margin: 0 0 8px; }
+.final-flower { color: #f2bdd5; font-size: 34px; line-height: 1; margin: 8px 0 16px; }
+.final-letter h1 { font-size: clamp(24px, 3.2vw, 32px); line-height: 1.4; margin: 0 0 16px; font-weight: 700; }
+.final-letter h1:focus { outline: none; }
+.final-wish { color: #effaff; font-size: 18px; line-height: 1.7; margin: 0 auto 18px; max-width: 720px; }
+.final-dedication { color: #e7bdd2; font-size: 15px; line-height: 1.8; margin: 0 0 24px; }
+.final-song {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 9px;
+  color: #102e39;
+  background: #9cddd5;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.final-song:hover { background: #b9f0e8; color: #102e39; text-decoration: none; }
+.final-song:focus-visible, .motion-toggle:focus-visible, .class-keepsake summary:focus-visible {
+  outline: 3px solid #ffe0a6;
+  outline-offset: 5px;
+}
+.motion-toggle {
+  position: fixed;
+  top: max(18px, env(safe-area-inset-top));
+  right: 18px;
+  z-index: 2;
+  border: 1px solid rgba(255, 230, 245, .45);
+  border-radius: 24px;
+  padding: 9px 16px;
+  background: rgba(24, 27, 52, .85);
+  color: #fff1f8;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.class-keepsake {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  border: 1px solid rgba(255, 220, 236, .25);
+  border-radius: 16px;
+  background: rgba(19, 28, 49, .93);
+}
+.class-keepsake summary { padding: 14px 20px; cursor: pointer; font-size: 15px; color: #ffe2ef; }
+.class-keepsake summary span { display: block; color: #bac8d6; font-size: 12px; margin-top: 4px; }
+.class-girls-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 18px;
+  padding: 12px 24px 24px;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffe6f2;
+}
+.class-girls-list li {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  text-shadow: 0 0 16px rgba(255, 195, 225, .18);
+}
+.class-girls-list li:nth-child(6n + 1) { color: #ffb7d5; }
+.class-girls-list li:nth-child(6n + 2) { color: #b9d7ff; }
+.class-girls-list li:nth-child(6n + 3) { color: #ffe19a; }
+.class-girls-list li:nth-child(6n + 4) { color: #b6eed7; }
+.class-girls-list li:nth-child(6n + 5) { color: #d6baff; }
+.class-girls-list li:nth-child(6n + 6) { color: #ffbea6; }
+.final-stars {
+  position: fixed;
+  z-index: -1;
+  top: 14%;
+  left: 8%;
+  pointer-events: none;
+  color: #ffe7b8;
+  text-shadow: 24vw 5vh 2px #ffd7ec, 72vw -3vh 1px #fff2d9, 81vw 54vh 2px #ffd7ec,
+    7vw 64vh 1px #fff2d9, 45vw 72vh 2px #ffd7ec, 60vw 33vh 1px #fff2d9;
+  animation: star-glow 4s ease-in-out infinite alternate;
+}
+.names-paused .name-drop, .names-paused .floating-name, .names-paused .final-stars { animation-play-state: paused; }
+@keyframes name-fall {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(100vh + 220px)); transform: translateY(calc(100dvh + 220px)); }
+}
+@keyframes name-sway {
+  from { transform: translateX(var(--sway-start)) rotate(var(--tilt-start)); }
+  to { transform: translateX(var(--sway-end)) rotate(var(--tilt-end)); }
+}
+@keyframes star-glow { from { opacity: .3; } to { opacity: .85; } }
+@media (max-width: 599px) {
+  .final-content { width: calc(100% - 28px); padding: 125px 0 100px; }
+  .final-letter { padding: 25px 18px; border-radius: 20px; }
+  .final-wish { font-size: 16px; }
+  .final-dedication { font-size: 13px; }
+  .final-song { font-size: 14px; padding: 12px 15px; }
+  .final-flower { font-size: 28px; }
+  .class-girls-list { gap: 14px 10px; padding: 10px 14px 20px; font-size: 13px; }
+  .class-girls-list li { flex-basis: calc((100% - 10px) / 2); }
+  .floating-name { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .final-scene *, .final-scene *::before, .final-scene *::after { animation: none !important; }
+}
+.reduced-motion .floating-names { display: none; }
+.reduced-motion .class-keepsake { background: #131c31; }
