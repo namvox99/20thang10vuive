@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
-    <title>What is this</title>
+    <title>20/10 vui vẻ · 52.01.NNANH.C</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -52,7 +52,29 @@
         </button>
       </div>
     </div>
-    <audio src="./sound/sound.mp3" autoplay></audio>
+    <section id="final-scene" class="final-scene" hidden aria-labelledby="final-title">
+      <div id="floating-names" class="floating-names" aria-hidden="true"></div>
+      <div class="final-stars" aria-hidden="true">✦</div>
+      <button id="toggle-name-motion" class="motion-toggle" type="button" aria-pressed="false">
+        Tạm dừng tên bay
+      </button>
+      <div class="final-content">
+        <div class="final-letter">
+          <p class="final-eyebrow">20.10 · 52.01.NNANH.C</p>
+          <p class="final-flower" aria-hidden="true">✿</p>
+          <h1 id="final-title" tabindex="-1"></h1>
+          <p id="final-wish" class="final-wish"></p>
+          <p class="final-dedication">Mỗi cái tên là một điều đặc biệt của lớp mình.<br />Cảm ơn vì đã là một phần của thanh xuân này ♡</p>
+          <a class="final-song" href="https://www.youtube.com/watch?v=WCm2elbTEZQ" target="_blank" rel="noopener noreferrer">Một bài hát dành tặng cậu ♡</a>
+        </div>
+        <details class="class-keepsake">
+          <summary>Có tên cậu ở đây nè ♡ <span>35 bông hoa của lớp mình</span></summary>
+          <ul id="class-girls-list" class="class-girls-list"></ul>
+        </details>
+      </div>
+    </section>
+    <audio src="./sound/sound.mp3" autoplay loop></audio>
+    <audio id="final-music" src="./sound/em-xinh-karaoke.mp3" preload="metadata" loop></audio>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -71,6 +93,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/finalScene.js"></script>
     <script src="js/myJs.js"></script>
   </body>
 </html>
