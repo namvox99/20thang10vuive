@@ -1,16 +1,16 @@
 const textConfig = {
-  text1: "Helloooo người ngồi bên kia màn hình",
+  text1: "Helloooo các bạn đang ngồi bên kia màn hình",
   text2: "Hôm nay là ngày 20/10 nèeee",
-  text3: "Dạo này mệt mỏi với trường lớp lắm đúng hong nè ? :3",
-  text4: "Thì nhân ngày 20/10 á, nên là có món quà tinh thần nho nhỏ để tặng người",
+  text3: "Dạo này mệt mỏi với trường lớp lắm đúng hong nè? :3",
+  text4: "Thì nhân ngày 20/10 á, nên là lớp trưởng có món quà tinh thần nho nhỏ để tặng mí bạn 52.01.NNANH.C",
   text5: "Thôi hổng dám nhận đâu",
   text6: "Đâu cho xem thử coiiiiii",
-  text7: "Có gì để nói với tui nèeee ?",
+  text7: "Có gì để nói với lớp trửn nèeee ?",
   text8: "Gửi cho tui coi dớiii",
-  text9: "Cảm ơn nhoooo, Nam cute thiệc <3333",
+  text9: "Cảm ơn lớp trửn dễ thương nhất HCMUE nho",
   text10: "1, 2, 3 con cá. 20/10 vui vẻ nháaaa",
   text11:
-    "Okela nè. Chúc em có một ngày 20/10 thiệc là dui dẻ nhoaaaaaa",
+    "Okela nè. Chúc tất cả các bóng hồng của 52.01.NNANH.C có một ngày 20/10 thật là tuyệt dời nghe <3",
   text12: "Okelaaa luônnnnn <3",
 };
 
